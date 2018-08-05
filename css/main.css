@@ -1,0 +1,478 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    background: lightgray;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*=== header ===*/
+.header {
+    background: #000;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.degraded {
+    background: linear-gradient(to right, rgba(52, 224, 247, 1) 0%, rgba(241, 111, 92, 1) 27%, rgba(245, 12, 229, 1) 51%, rgba(34, 240, 24, 1) 78%, rgba(230, 230, 39, 1) 100%);
+    height: 1px;
+}
+
+/*=== slide ===*/
+.slide {
+    background: url('../img/1.jpg'), #000;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.container {
+    animation: cambio 10s infinite;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+@keyframes cambio {
+    0% {
+        background: rgb(255, 255, 255);
+    }
+    25% {
+        background: rgba(255, 255, 255, 0);
+    }
+    75% {
+        background: rgba(255, 255, 255, 0);
+    }
+    100% {
+        background: rgb(255, 255, 255);
+    }
+}
+
+.title {
+    background: #00000078;
+    color: #fff;
+    font-family: 'Covered By Your Grace', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+.item {
+    height: 300px;
+    margin: 40px 10px;
+    transition: all 5s ease;
+    width: 21%;
+}
+
+.item-hover:hover {
+    height: 55vh;
+    width: 24%;
+}
+
+.white-filter {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.247);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    transition: all 1.5s ease-out;
+    width: 100%;
+}
+
+.white-filter:hover {
+    background: #fff;
+}
+
+.black-filter {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 90%;
+    text-align: center;
+}
+
+.social-networks{
+    display: flex;
+    font-size: 30px;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.social-networks a {
+    color: #fff;
+    margin: 10px;
+    width: 40px;
+}
+
+/*=== #END# slide ===*/
+
+/*=== navigation ===*/
+.navigation {
+    align-items: center;
+    background: #1d1d1d;
+    color: #999999;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 16px;
+    padding: 10px 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button-menu {
+    cursor: pointer;
+    display: none;
+    flex: 1 1 auto;
+    font-size: 25px;    
+}
+
+.logo {
+    font-family: 'Covered By Your Grace', cursive;
+    flex: 1 1 auto;
+    text-transform: uppercase;
+}
+
+.main-navigation {
+    flex: 8 1 auto;
+}
+
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu li a {
+    color: #999999;
+}
+
+.menu li a:hover {
+    color: #fff;
+}
+/*=== #END# navigation ===*/
+/*=== #END# header ===*/
+
+
+/*=== section ===*/
+.section {
+    background: #000;
+}
+
+.posts {
+    background: #f1f1f1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 70px;
+}
+
+.column-post {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 30%;
+}
+
+.post {
+    box-shadow: 0 0 5px #4444442a;
+    color: #818181;
+    background: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 18px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    width: 100%;
+}
+
+.post h3 {
+    background: #1d1d1d;
+    color: #999999;
+    font-size: 20px;
+    padding: 25px;
+    position: relative;
+}
+
+.post h4 {
+    background: #614069;
+    color: #bebebe;
+    font-size: 25px;
+    height: auto;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.h4-bg{
+    background: #000;
+}
+
+.user-image {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.user-image::after{
+    content: '';
+    background: #f3f3f3;
+    height: 50%;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.user-image img {
+    width: 50%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.post .img-post {
+    width: 100%;
+}
+
+.post h3::after {
+    content: '';
+    transform: rotate(45deg);
+    position: absolute;
+    left: 10%;
+    top: 65px;
+    width: 20px;
+    height: 20px;
+    background-color: #1d1d1d;
+}
+
+.post p {
+    padding: 30px 15px;
+}
+
+.post .social-networks a{
+    color: #8a8a8a;
+}
+
+.time {
+    background: #f3f3f3;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.older-post {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.older-button{
+    background: #1d1d1d;
+    color: #fff;
+    padding: 15px;
+}
+
+.older-button:hover{
+    color: #999999
+}
+/*=== #END# section ===*/
+
+
+/*=== footer ===*/
+.footer {
+    background: #484848;
+    color: #999999;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 16px;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.footer div{
+    width: 30%;
+}
+
+.footer h3{
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.more-about a{
+    color: #999999;
+}
+
+.more-about p{
+    border-bottom: 1px solid #999999;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+.visit-us .social-networks{
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.social-networks .facebook{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.footer-footer{
+    background: #000;
+    font-size: 13px;
+    margin-top: 30px;
+    text-align: center;
+    width: 100% !important;
+}
+/*=== #END# footer ===*/
+
+
+/*=== media queries ===*/
+@media all and (max-width: 900px){
+    .navigation {
+        font-size: 14px;
+    }
+    .item {
+        width: 30%;
+    }
+    .posts {
+        padding: 70px 20px;
+    }
+    .post{
+        font-size: 15px;
+    }
+    .post .social-networks a{
+        margin: 3px;
+        /* font-size: 15px; */
+    }
+    .post h4 {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+    
+    .footer h3{
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width:700px){    
+    .main-navigation{
+        width: 100%;
+    }
+
+    .time {
+        font-size: 13px;
+    }
+
+    
+}
+
+@media all and (max-width: 600px){
+    .black-filter {
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .container .title{
+        margin-bottom: 20px;
+    }
+
+    .container .item{
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .item-hover:hover {
+        height: 0%;
+        height: auto;
+    }
+
+    .column-post {
+        width: 100%;
+    }
+
+    .posts {
+        flex-flow: column wrap;
+    }    
+}
+
+@media all and (max-width:500px){
+    .navigation{
+        padding: 10px 30px;
+    }
+
+    .button-menu{
+        display: inline-block;
+        width: 100%;        
+    }
+
+    .navigation .logo{
+        width: 100%;
+        margin: 10px;
+    }
+
+    .main-navigation{
+        display: none;
+    }
+    
+    .show-menu{
+        display: inline-block;
+    }
+
+    .main-navigation .menu,
+    .main-navigation .menu a{
+        display: block; 
+        font-size: 15px;
+        padding: 10px; 
+    }
+
+    .main-navigation .menu span{
+        display: none;
+    }
+
+    .footer {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    
+    .footer div{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+@media all and (max-width:400px){
+    .container .item{
+        font-size: 14px;
+    }
+}
